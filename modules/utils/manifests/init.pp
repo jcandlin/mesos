@@ -6,15 +6,15 @@ class utils {
   package { ["unzip"]:
         ensure => installed,         
   }
-  package { ["openjdk-6-jre-headless"]:
+  package { "build-essential":
+        ensure => present,
+  } 
+  package { ["openjdk-6-jdk"]:
         ensure => installed,             
   }
   package { 'git-core' :
         ensure => 'latest',
   }
-  package { "build-essential":
-        ensure => present,
-  }  
   package { "libcurl4-nss-dev":
         ensure => present,
   }  
