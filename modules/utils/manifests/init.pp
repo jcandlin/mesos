@@ -33,13 +33,10 @@ class utils {
   package { 'git':
         ensure => present,
   }
-  package { 'vim-enhanced':
+  package { 'vim':
         ensure => present,
   }
-  package { 'nc':
+  package { 'netcat':
         ensure => present,
-  }
-  service { 'iptables':
-        ensure => stopped,
   }
 }
