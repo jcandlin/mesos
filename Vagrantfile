@@ -36,14 +36,14 @@ config.vm.provision :puppet do |puppet|
 end
 
 config.vm.define "mesos" do |mesos|
-  mesos.vm.box = "puppetlabs/centos-6.5-32-puppet"
+  mesos.vm.box = "precise64"
   mesos.vm.hostname = "mesos"
   mesos.vm.network "private_network", ip: "192.168.50.4"
-  mesos.vm.network :forwarded_port, guest:80, host:9091
+  mesos.vm.network :forwarded_port, guest:80, host:9093
 end
 
 #config.vm.define "server" do |server|
-#  server.vm.box = "puppetlabs/centos-6.5-32-puppet"
+#  server.vm.box = "precise64"
 #  server.vm.hostname = "server"
 #  server.vm.network "private_network", ip: "192.168.50.2"
 #  server.vm.network :forwarded_port, guest:80, host:9090
